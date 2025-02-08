@@ -1,0 +1,93 @@
+@font-face {
+    font-family: bruhfont;
+    src: url(PTSansNarrow-Bold.ttf);
+}
+body{
+    background:linear-gradient(85deg ,rgb(255, 255, 255),rgb(255, 255, 255));
+    font-family: bruhfont;
+    color: rgb(0, 0, 0);
+    
+}
+#head-name{
+    text-align: center;
+    font-size: 3vw;
+}
+#butilka{
+    height: 67vh;
+    width: 42vw;
+    filter:drop-shadow( 0 0 1vmax white);
+    margin-left: 28vw;
+    margin-top: 10vh;
+    transition-duration:1s ;
+   /* animation-name: waterdrop; */
+    animation-duration: 1.9s;
+}
+#butilka:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    transform: rotate(-30deg);
+    filter:drop-shadow( 0 0 2vmax white);
+}
+@keyframes waterdrop {
+    0% {
+        margin-top: 0vh;
+        transform: rotate(-30deg);
+    }
+  
+    
+    100%{
+        margin-top: 10vh;
+        transform: rotate(-720deg);
+    }
+  
+}
+#secondstep{
+    display: none;
+    animation-name: appear;
+    animation-duration: 1s;
+    text-align: center;
+    font-size: 4vmax;
+    text-shadow: 0 0 0.4vh rgb(0, 0, 0);
+}
+#btn{
+    font-size: 3vmax;
+    background-color:rgb(0, 0, 0); 
+    font-family: bruhfont;
+    text-decoration: none;
+    color:  white;
+    border-radius: 2vmax;
+    animation-name: appear1;
+    animation-duration: 1.6s;
+}
+#btn-text{
+    text-decoration: none;
+    color:  white;
+}
+
+@keyframes appear1 {
+    0% {
+        background-size: 0%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #butilka{
+        width: 80vw;
+        margin-left: 10vw;
+    }
+    #head-name{
+        font-size: 7.5vw;
+    }
+}
